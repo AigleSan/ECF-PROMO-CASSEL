@@ -10,6 +10,7 @@ import { SigninComponent } from './views/signin/signin.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule} from '@angular/common/http';
 import { UserProfileComponent } from './views/user-profile/user-profile.component';
+import { GameformComponent } from './views/gameform/gameform.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { UserProfileComponent } from './views/user-profile/user-profile.componen
     HomepageComponent,
     LoginComponent,
     SigninComponent,
-    UserProfileComponent
+    UserProfileComponent,
+    GameformComponent
   ],
   imports: [
     BrowserModule,

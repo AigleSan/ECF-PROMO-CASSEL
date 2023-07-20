@@ -1,5 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-signin',
@@ -7,10 +9,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./signin.component.css']
 })
 export class SigninComponent {
+  
+  constructor(private http: HttpClient, private router: Router){}
 
-  constructor(private http: HttpClient){
-
-  }
 
 
   onUserCreate(users: {username: string, email: string, password: string}){
@@ -19,5 +20,6 @@ export class SigninComponent {
     .subscribe((data) => {
       console.log(data);
     });
+    this.router.navigate(['/']);
   }
 }
